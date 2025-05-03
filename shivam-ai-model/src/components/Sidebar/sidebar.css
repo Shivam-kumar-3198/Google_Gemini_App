@@ -1,0 +1,111 @@
+.sidebar {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* push .top and .bottom apart */
+    background-color: rgba(141, 173, 197, 0.423);
+    padding: 25px 15px;
+    width: 250px; /* optional fixed width */
+  }
+  
+  .sidebar img {
+    width: 20px;
+  }
+  
+  .sidebar .menu {
+    display: block;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  
+  .sidebar .new-chat {
+    margin-top: 50px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+    background-color: #e6eaf1;
+    border-radius: 50px;
+    font-size: 14px;
+    color: rgb(18, 18, 18);
+    cursor: pointer;
+  }
+  
+  .sidebar .recent {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .sidebar .recent-title {
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+  
+  .sidebar .recent-entry {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px;
+    padding-right: 40px;
+    border-radius: 50px;
+    color: #282828;
+    cursor: pointer;
+  }
+  
+  .sidebar .recent-entry:hover {
+    background-color: #e2e6eb;
+  }
+  
+  .sidebar .bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .sidebar .bottom-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    padding-left: 10px;
+    border-radius: 50px;
+    color: #282828;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .sidebar .bottom-item:hover {
+    background-color: #e2e6eb;
+  }
+
+  .sidebar img {
+    width: 20px;
+    transition: all 0.3s ease;
+  }
+  
+  .sidebar.expanded {
+    width: 250px;
+    transition: width 0.3s ease;
+  }
+  
+  .sidebar.collapsed {
+    width: 80px;
+    transition: width 0.3s ease;
+  }
+  
+  /* Hide only the text labels, not the icons */
+  .sidebar.collapsed .new-chat p,
+  .sidebar.collapsed .recent-entry p,
+  .sidebar.collapsed .bottom-item p,
+  .sidebar.collapsed .recent-title {
+    display: none;
+  }
+  
+  /* Optional: Center icons in collapsed view */
+  .sidebar.collapsed .new-chat,
+  .sidebar.collapsed .recent-entry,
+  .sidebar.collapsed .bottom-item {
+    justify-content: center;
+    padding: 10px;
+  }
+  
